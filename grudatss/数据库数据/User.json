@@ -1,0 +1,43 @@
+{
+  "RECORDS": [
+    {
+      "_id": "605aa163cb6f2c2e509f5f87",
+      "__v": "0",
+      "age": "19",
+      "create_time": "24/3/2021 02:18:11",
+      "password": "$2b$10$.ZvMEM.rRWNd5vfGCMSROOf/mkF1i8Xw6hCm0GSDVM10mRwuchCp2",
+      "sex": "男",
+      "user_role": "0",
+      "userID": "178376647",
+      "usermail": "167@167.cn",
+      "username": "李杨",
+      "userphone": "17837314331"
+    },
+    {
+      "_id": "605aa19bcb6f2c2e509f5f88",
+      "__v": "0",
+      "age": "36",
+      "create_time": "24/3/2021 02:19:07",
+      "password": "$2b$10$JGfINaBV1/vKJt0kCFhaB.BZ7gi3T4zjGnhbVdtKnKX2BjaG8XMb.",
+      "sex": "男",
+      "user_role": "1",
+      "userID": "2368907",
+      "usermail": "178@163.com",
+      "username": "阳峰",
+      "userphone": "13567543456"
+    },
+    {
+      "_id": "60710d9419e4531cac5054f6",
+      "__v": "0",
+      "age": "18",
+      "create_time": "10/4/2021 02:29:40",
+      "password": "$2b$10$d0GPvr.Ab3KqAZPVfYgWLeXnWfiPc78e1066gAckSTru8eh8LiyWG",
+      "sex": "男",
+      "user_role": "2",
+      "userID": "123",
+      "usermail": "168@admin.com",
+      "username": "系统管理员",
+      "userphone": "16742657812"
+    }
+  ]
+}

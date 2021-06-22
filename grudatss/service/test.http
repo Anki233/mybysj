@@ -1,0 +1,143 @@
+@url=http://localhost:5086
+@json = Content-Type: application/json
+### 注册
+post {{url}}/register
+{{json}}
+
+{
+    "userID": "123",
+    "password": "admin",
+    "username": "系统管理员",
+    "usermail": "168@admin.com",
+    "userphone": "16742657812",
+    "user_role": 2
+}
+
+
+### 登录
+post {{url}}/login
+{{json}}
+
+{
+    "userID": "178376647",
+    "password": "123"
+}
+
+### 查询个人信息
+get {{url}}/users/profile/178376647
+{{json}}
+
+### 更新个人信息
+post {{url}}/users/updateprofile
+{{json}}
+
+{
+    "userID": "178376647",
+    "usermail": "133344@198.com"
+}
+
+### 修改密码
+post {{url}}/users/modifypass
+{{json}}
+
+{
+    "userID": "178376647",
+    "old_password": "456",
+    "new_password": "123"
+}
+
+### 教师出题
+post {{url}}/teacher/submitqus
+{{json}}
+
+{
+    "subNO": "5",
+    "subTitle": "财务统",
+    "teacherNO": "2368907",
+    "subDetail": "xx"
+}
+
+### 更新选题
+put {{url}}/teacher/updatequs
+{{json}}
+
+{
+    "subNO": "5",
+    "subTitle": "教务管理系统",
+    "subDetail": "选用js和vue以及node实现"
+}
+
+### 教师删除选题
+delete {{url}}/teacher/deletequs/1
+{{json}}
+
+### 学生选择题目
+put {{url}}/student/topsele
+{{json}} 
+
+{
+    "flag": true,
+    "subNO": "1",
+    "teacherNO": "2368907",
+    "stuNO": "178376647"
+}
+
+### 学生退选
+put {{url}}/student/topsele
+{{json}}
+
+{
+    "flag": false,
+    "stuNO": "178376647"
+}
+
+### 教师选择学生
+put {{url}}/teacher/choosestu
+{{json}}
+
+{
+    "teacherNO": "2368907",
+    "checkflag": "1",
+    "subNO": "1"
+}
+
+### 管理员操作选题
+put {{url}}/admin/updatesub
+{{json}}
+
+{
+    "subNO": "1",
+    "status": "2",
+    "note": "重复选题，请重新修改！"
+}
+
+### 查询已选
+post {{url}}/info/getseletsub
+{{json}}
+
+{
+    "id":"2368907",
+    "role":1,
+    "currentPage": 1,
+    "pageSize": 10
+}
+
+### 查询选题
+get {{url}}/info/searchinfo/1
+{{json}}
+
+
+### 查询所有选题
+post {{url}}/info/getsub
+{{json}}
+
+{
+    "status": 1,
+    "currentPage": 1,
+    "pageSize": 10,
+    "role":0
+}
+###
+### 管理员删除已选题目
+delete {{url}}/admin/delselsub/1
+{{json}}
